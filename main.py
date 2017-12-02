@@ -9,6 +9,9 @@ from bs4 import BeautifulSoup
 import lxml
 from playsound import playsound
 
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -52,7 +55,7 @@ def checkIsOnMarket(browser, interval):
             printout(coin_tran)
 
     if find is False:
-        printout("신규 상장 발견되지 않음")
+        printout(u"신규 상장 발견되지 않음")
 
     find = False
     sleep(interval)
